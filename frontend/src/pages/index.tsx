@@ -13,6 +13,7 @@ import {
   TestimonialsDesigns,
   ContactFormDesigns,
 } from '../components/WebPageComponents/designs';
+import { motion } from 'framer-motion';
 
 import HeroSection from '../components/WebPageComponents/HeroComponent';
 
@@ -130,48 +131,50 @@ export default function WebSite() {
         pages={pages}
       />
       <main className={`flex-grow  ${bgColor}    rounded-none  `}>
-        <HeroSection
-          projectName={'affects their school performance and social growth'}
-          image={['Child using tablet happily']}
-          mainText={`Empower Kids with Smart Screen Time`}
-          subTitle={`Discover how ${projectName} helps balance education and social interactions with AI-driven insights and gamification. Enhance your child's learning and growth today.`}
-          design={HeroDesigns.IMAGE_RIGHT || ''}
-          buttonText={`Get Started Now`}
-        />
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <HeroSection
+            projectName={'affects their school performance and social growth'}
+            image={['Child using tablet happily']}
+            mainText={`Empower Kids with Smart Screen Time`}
+            subTitle={`Discover how ${projectName} helps balance education and social interactions with AI-driven insights and gamification. Enhance your child's learning and growth today.`}
+            design={HeroDesigns.IMAGE_RIGHT || ''}
+            buttonText={`Get Started Now`}
+          />
 
-        <FeaturesSection
-          projectName={'affects their school performance and social growth'}
-          image={['Child engaging with app']}
-          withBg={1}
-          features={features_points}
-          mainText={`Explore ${projectName} Key Features`}
-          subTitle={`Discover how ${projectName} transforms screen time into a balanced learning and social experience for your child.`}
-          design={FeaturesDesigns.CARDS_GRID_WITH_ICONS || ''}
-        />
+          <FeaturesSection
+            projectName={'affects their school performance and social growth'}
+            image={['Child engaging with app']}
+            withBg={1}
+            features={features_points}
+            mainText={`Explore ${projectName} Key Features`}
+            subTitle={`Discover how ${projectName} transforms screen time into a balanced learning and social experience for your child.`}
+            design={FeaturesDesigns.CARDS_GRID_WITH_ICONS || ''}
+          />
 
-        <AboutUsSection
-          projectName={'affects their school performance and social growth'}
-          image={['Team collaborating on project']}
-          mainText={`Transforming Screen Time with ${projectName}`}
-          subTitle={`${projectName} is dedicated to creating a balanced digital experience for children. Our AI-driven app promotes education and social growth, ensuring kids thrive both online and offline.`}
-          design={AboutUsDesigns.IMAGE_LEFT || ''}
-          buttonText={`Learn More`}
-        />
+          <AboutUsSection
+            projectName={'affects their school performance and social growth'}
+            image={['Team collaborating on project']}
+            mainText={`Transforming Screen Time with ${projectName}`}
+            subTitle={`${projectName} is dedicated to creating a balanced digital experience for children. Our AI-driven app promotes education and social growth, ensuring kids thrive both online and offline.`}
+            design={AboutUsDesigns.IMAGE_LEFT || ''}
+            buttonText={`Learn More`}
+          />
 
-        <TestimonialsSection
-          projectName={'affects their school performance and social growth'}
-          design={TestimonialsDesigns.HORIZONTAL_CAROUSEL || ''}
-          testimonials={testimonials}
-          mainText={`What Users Say About ${projectName} `}
-        />
+          <TestimonialsSection
+            projectName={'affects their school performance and social growth'}
+            design={TestimonialsDesigns.HORIZONTAL_CAROUSEL || ''}
+            testimonials={testimonials}
+            mainText={`What Users Say About ${projectName} `}
+          />
 
-        <ContactFormSection
-          projectName={'affects their school performance and social growth'}
-          design={ContactFormDesigns.WITH_IMAGE || ''}
-          image={['Person typing on laptop']}
-          mainText={`Get in Touch with ${projectName} `}
-          subTitle={`Reach out to us anytime with your questions or feedback. Our team at ${projectName} is here to assist you and will respond promptly.`}
-        />
+          <ContactFormSection
+            projectName={'affects their school performance and social growth'}
+            design={ContactFormDesigns.WITH_IMAGE || ''}
+            image={['Person typing on laptop']}
+            mainText={`Get in Touch with ${projectName} `}
+            subTitle={`Reach out to us anytime with your questions or feedback. Our team at ${projectName} is here to assist you and will respond promptly.`}
+          />
+        </motion.div>
       </main>
       <WebSiteFooter
         projectName={'affects their school performance and social growth'}
