@@ -1,0 +1,31 @@
+module.exports = {
+  production: {
+    dialect: 'postgres',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    logging: console.log,
+    seederStorage: 'sequelize',
+  },
+  development: {
+    username: 'postgres',
+    dialect: 'postgres',
+    password: '',
+    database: 'db_affects_their_school_performance_and_social_growth',
+    host: process.env.DB_HOST || 'localhost',
+    logging: console.log,
+    seederStorage: 'sequelize',
+  },
+  dev_stage: {
+    dialect: 'postgres',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    logging: console.log,
+    seederStorage: 'sequelize',
+  },
+};
